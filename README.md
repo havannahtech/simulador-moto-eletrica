@@ -1,5 +1,5 @@
-[index.html.html](https://github.com/user-attachments/files/24573352/index.html.html)
-CALCULADORA SAGAZ MOTORS
+[index.html.html](https://github.com/user-attachments/files/24573884/index.html.html)
+L4NKIN MOBILIDADE ELETRICA
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +20,7 @@ CALCULADORA SAGAZ MOTORS
       background: #111;
       padding: 24px;
       border-radius: 16px;
-      max-width: 420px;
+      max-width: 440px;
       width: 100%;
       box-shadow: 0 12px 30px rgba(0,0,0,0.6);
     }
@@ -33,7 +33,7 @@ CALCULADORA SAGAZ MOTORS
       text-align: center;
       font-size: 0.9rem;
       opacity: 0.8;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     label {
       font-size: 0.85rem;
@@ -95,6 +95,12 @@ CALCULADORA SAGAZ MOTORS
     <h1>Simulador de Economia</h1>
     <div class="subtitle">Moto Elétrica 1000W • Sagaz Motors</div>
 
+    <label>Nome completo</label>
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+
+    <label>WhatsApp (com DDD)</label>
+    <input type="tel" id="whatsappCliente" placeholder="Ex: 21999999999" />
+
     <label>Quantos km você roda por dia?</label>
     <input type="number" id="kmDia" placeholder="Ex: 30" />
 
@@ -115,26 +121,27 @@ CALCULADORA SAGAZ MOTORS
       <p id="eletrica"></p>
       <p id="economia"></p>
 
-      <a class="cta" href="https://wa.me/5521972871998?text=Olá!%20Fiz%20a%20simulação%20no%20site%20da%20Sagaz%20Motors%20e%20quero%20fazer%20um%20test%20drive%20da%20moto%20elétrica" target="_blank">
-        Falar com a Sagaz Motors no WhatsApp
+      <a id="linkWhats" class="cta" target="_blank">
+        Enviar resultado para a Sagaz Motors
       </a>
     </div>
   </div>
 
   <script>
     function calcular() {
+      const nome = document.getElementById('nome').value.trim();
+      const whatsappCliente = document.getElementById('whatsappCliente').value.trim();
       const kmDia = Number(document.getElementById('kmDia').value);
       const precoComb = Number(document.getElementById('precoComb').value);
       const kmLitro = Number(document.getElementById('kmLitro').value);
       const precoKwh = Number(document.getElementById('precoKwh').value);
 
-      if (!kmDia || !precoComb || !kmLitro || !precoKwh) {
+      if (!nome || !whatsappCliente || !kmDia || !precoComb || !kmLitro || !precoKwh) {
         alert('Preencha todos os campos corretamente');
         return;
       }
 
       const kmMes = kmDia * 30;
-
       const litrosMes = kmMes / kmLitro;
       const custoComb = litrosMes * precoComb;
 
@@ -147,6 +154,18 @@ CALCULADORA SAGAZ MOTORS
       document.getElementById('combustao').innerText = `Gasto mensal com gasolina: R$ ${custoComb.toFixed(2)}`;
       document.getElementById('eletrica').innerText = `Gasto mensal com elétrica 1000W: R$ ${custoEletrico.toFixed(2)}`;
       document.getElementById('economia').innerText = `Economia mensal: R$ ${economia.toFixed(2)}`;
+
+      const mensagem = `Olá, Sagaz Motors!%0A%0A` +
+        `*Simulação de Economia – Moto Elétrica 1000W*%0A%0A` +
+        `Nome: ${encodeURIComponent(nome)}%0A` +
+        `WhatsApp: ${encodeURIComponent(whatsappCliente)}%0A%0A` +
+        `Gasto mensal com gasolina: R$ ${custoComb.toFixed(2)}%0A` +
+        `Gasto mensal com elétrica: R$ ${custoEletrico.toFixed(2)}%0A` +
+        `Economia mensal: R$ ${economia.toFixed(2)}%0A%0A` +
+        `Gostaria de mais informações e test drive.`;
+
+      const link = `https://wa.me/5521972871998?text=${mensagem}`;
+      document.getElementById('linkWhats').href = link;
 
       document.getElementById('resultado').style.display = 'block';
     }
