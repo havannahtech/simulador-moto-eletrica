@@ -1,5 +1,4 @@
-[index.html.html](https://github.com/user-attachments/files/24573884/index.html.html)
-L4NKIN MOBILIDADE ELETRICA
+L4NKIN MOBILIDADE ELÉTRICA
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -92,6 +91,9 @@ L4NKIN MOBILIDADE ELETRICA
 </head>
 <body>
   <div class="box">
+    <div style="text-align:center; margin-bottom:10px;">
+      <img src="logo-sagaz-motors.png" alt="Sagaz Motors" style="max-width:140px; margin-bottom:6px;" />
+    </div>
     <h1>Simulador de Economia</h1>
     <div class="subtitle">Moto Elétrica 1000W • Sagaz Motors</div>
 
@@ -120,6 +122,7 @@ L4NKIN MOBILIDADE ELETRICA
       <p id="combustao"></p>
       <p id="eletrica"></p>
       <p id="economia"></p>
+      <p id="payback"></p>
 
       <a id="linkWhats" class="cta" target="_blank">
         Enviar resultado para a Sagaz Motors
@@ -151,9 +154,14 @@ L4NKIN MOBILIDADE ELETRICA
 
       const economia = custoComb - custoEletrico;
 
+      // Valor médio estimado da moto elétrica (ajustável)
+      const valorMoto = 9000;
+      const mesesPayback = economia > 0 ? (valorMoto / economia) : 0;
+
       document.getElementById('combustao').innerText = `Gasto mensal com gasolina: R$ ${custoComb.toFixed(2)}`;
       document.getElementById('eletrica').innerText = `Gasto mensal com elétrica 1000W: R$ ${custoEletrico.toFixed(2)}`;
       document.getElementById('economia').innerText = `Economia mensal: R$ ${economia.toFixed(2)}`;
+      document.getElementById('payback').innerText = `Com essa economia, sua moto pode se pagar em aproximadamente ${mesesPayback.toFixed(1)} meses`;
 
       const mensagem = `Olá, Sagaz Motors!%0A%0A` +
         `*Simulação de Economia – Moto Elétrica 1000W*%0A%0A` +
