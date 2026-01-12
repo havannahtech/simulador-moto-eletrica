@@ -1,5 +1,5 @@
-[index.html.html](https://github.com/user-attachments/files/24573284/index.html.html)
-<!DOCTYPE html>
+[index.html.html](https://github.com/user-attachments/files/24573334/index.html.html)
+CALCULADORA SAGAZ MOTORS html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
