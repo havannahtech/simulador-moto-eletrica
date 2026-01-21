@@ -1,4 +1,4 @@
-<SIMULADOR MOTO ELETRICA SAGAZ MOTORS>
+<SIMULADOR ECONOMIA SAGAZ MOTORS>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     .subtitle{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:18px}
     label{font-size:13px;color:#cbd5e1;display:block;margin-top:12px}
     input{width:100%;padding:14px;border-radius:10px;border:none;font-size:16px;margin-top:6px}
-    button{background:#e11d48;color:#fff;border:none;padding:12px;border-radius:12px;font-size:14px;cursor:pointer;width:48%} .btn-row{display:flex;gap:4%;margin-top:18px} .btn-link{display:flex;align-items:center;justify-content:center;background:#e11d48;color:#fff;border-radius:12px;font-size:14px;font-weight:bold;text-decoration:none;width:48%} .btn-link:hover{background:#be123c}
+    button{background:#e11d48;color:#fff;border:none;padding:12px;border-radius:12px;font-size:14px;cursor:pointer;width:32%} .btn-row{display:flex;gap:2%;margin-top:18px} .btn-link{display:flex;align-items:center;justify-content:center;background:#e11d48;color:#fff;border-radius:12px;font-size:14px;font-weight:bold;text-decoration:none;width:32%} .btn-link:hover{background:#be123c}
     button:hover{background:#be123c}
     .result{display:none;margin-top:20px;background:#111827;padding:18px;border-radius:14px}
     .result h2{color:#e11d48;font-size:1.1rem;margin-bottom:10px}
@@ -55,6 +55,7 @@
   <div class="btn-row">
     <button onclick="calcular()">Calcular Economia</button>
     <a href="https://havannahtech.github.io/PARCELAMENTO-SAGAZ-MOTORS/" target="_blank" class="btn-link">Valor das Parcelas</a>
+    <a href="https://wa.me/c/5521972871998" target="_blank" class="btn-link">Catálogo de Preços</a>
   </div>
 
   <div class="result" id="resultado">
