@@ -1,4 +1,4 @@
-<SIMULADOR DE MOTO ELETRICA SAGAZ MOTORS>
+<>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -145,7 +145,7 @@
   <div class="btn-row">
     <button onclick="calcular()">Calcular Economia</button>
     <a href="https://havannahtech.github.io/PARCELAMENTO-SAGAZ-MOTORS/" target="_blank" class="btn-link">Valor das Parcelas</a>
-    <a href="https://wa.me/c/5521972871998" target="_blank" class="btn-link">Catálogo de Preços</a>
+    <a href="https://wa.me/c/5521972871998" target="_blank" class="btn-link">Preços</a>
   </div>
 
   <div class="result" id="resultado">
