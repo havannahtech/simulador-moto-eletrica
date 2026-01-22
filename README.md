@@ -19,7 +19,7 @@
       background:#0b0b0b;
       padding:24px;
       border-radius:18px;
-      box-shadow:0 0 30px rgba(255,0,0,.35)
+      box-shadow:0 0 30px rgba(127,29,29,.45)
     }
     .header{text-align:center;margin-bottom:24px}
     .header img{
@@ -28,7 +28,7 @@
       height:auto;
       background:transparent; /* garante fundo transparente */
     }
-    h1{color:#e11d48;margin-top:10px;font-size:1.6rem}
+    h1{color:#7f1d1d;margin-top:10px;font-size:1.6rem}
     .subtitle{text-align:center;font-size:.95rem;opacity:.8;margin-bottom:20px}
 
     label{font-size:13px;color:#cbd5e1;display:block;margin-top:14px}
@@ -57,7 +57,7 @@
     button,.btn-link{
       flex:1;
       min-width:220px;
-      background:#e11d48;
+      background:#7f1d1d;
       color:#fff;
       border:none;
       padding:14px;
@@ -68,7 +68,7 @@
       text-align:center;
       text-decoration:none
     }
-    button:hover,.btn-link:hover{background:#be123c}
+    button:hover,.btn-link:hover{background:#5f1414}
 
     .result{
       display:none;
@@ -77,7 +77,7 @@
       padding:20px;
       border-radius:14px
     }
-    .result h2{color:#e11d48;font-size:1.2rem;margin-bottom:12px}
+    .result h2{color:#7f1d1d;font-size:1.2rem;margin-bottom:12px}
     .result p{font-size:1rem;margin:8px 0}
 
     .cta-link{
