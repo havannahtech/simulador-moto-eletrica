@@ -1,4 +1,4 @@
-<SIMULADOR DE ECONOMIA SAGAZ MOTORS>
+<SIMULADOR DE MOTO ELETRICA SAGAZ MOTORS>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -42,17 +42,17 @@
     }
 
     .row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap; /* quebra em tablets menores */
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:16px;
     }
     .col{flex:1;min-width:220px}
 
     .btn-row{
-      display:flex;
-      gap:12px;
-      margin-top:22px;
-      flex-wrap:wrap
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:14px;
+      margin-top:22px
     }
     button,.btn-link{
       flex:1;
@@ -96,12 +96,18 @@
     /* Ajustes específicos para tablets */
     @media (max-width: 1024px){
       h1{font-size:1.4rem}
+      .container{padding:20px;max-width:100%}
+    }
       .container{padding:20px}
     }
 
     /* Ajustes para celulares */
     @media (max-width: 600px){
-      body{padding:12px}
+      body{padding:10px}
+      h1{font-size:1.25rem}
+      .header img{max-width:150px}
+      input,button,.btn-link{font-size:15px;padding:14px}
+    }
       h1{font-size:1.3rem}
     }
   </style>
